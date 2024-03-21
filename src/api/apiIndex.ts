@@ -1,9 +1,8 @@
 import axios, { AxiosInstance } from "axios";
 import { formatDateFromIso } from "../utils/dateHelper";
-import Service from "../models/Service";
 
 // api base URL
-const baseURL = "http://localhost:8000/api";
+const baseURL = process.env.REACT_APP_BACKEND_URL;
 //api axios  instance
 export const api: AxiosInstance = axios.create({
   baseURL,

@@ -30,8 +30,9 @@ const CustomDataTable = (props: CustomDataTableProps) => {
       selectionMode={props.isRowClickable ? "single" : undefined}
       onRowSelect={props.onRowClick}
     >
-      {props.columns.map((column) => (
+      {props.columns.map((column, index) => (
         <Column
+          key={`${column.field} ${index}`}
           field={column.field}
           header={column.header}
           style={column.style}
