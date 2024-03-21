@@ -1,0 +1,98 @@
+.client-service-card-wrapper {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #fffff5;
+  justify-content: center;
+  padding-left: 24px;
+  align-items: start;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  min-width: 400px;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.status-indicator {
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.client-service-name {
+  font-size: 32px;
+}
+
+.client-service-due-date {
+  position: absolute;
+  bottom: 8px;
+  right: 24px;
+  font-size: 14px !important;
+}
+
+.status-Pending {
+  background: orange;
+}
+
+.status-Active {
+  background: green;
+}
+
+.status-Inactive {
+  background-color: red;
+}
+
+.status-container {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.shimmerBG {
+  border-radius: 24px;
+  /* min-width: 100%;
+  min-height: 100%; */
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.delete-icon-container {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  transform: scale(0);
+  transition: all 0.2s ease-in;
+}
+
+.client-service-card-wrapper:hover .delete-icon-container {
+  transform: scale(1);
+}

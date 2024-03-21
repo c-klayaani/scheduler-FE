@@ -1,0 +1,24 @@
+.form-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  gap: 24px;
+  padding-top: 32px;
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-error {
+  min-height: 16px;
+  color: red;
+}
